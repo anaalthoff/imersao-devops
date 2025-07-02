@@ -2,6 +2,11 @@
 
 Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e matrículas em uma instituição de ensino.
 
+Atualmente a empresa em que trabalho utiliza Docker, CI/CD, pipeline e várias ferramentas para automatizar e entregar processos continuamente. Inclusive, já criei dockerfile, docker compose, verifico as pipelines e trabalho com frequência com DevOps. Porém, achei necessário ingressar neste curso para conseguir entender melhor o passo a passo, os porquês e como e quando tudo funciona.
+
+O projeto em python não foi de minha criação, ele foi importado de https://github.com/guilhermeonrails/ellis. A criação dos arquivos posteriores foram feitas por mim. No ReadMe deixarei o passo a passo dessa criação e algumas explicações.
+
+
 ## Pré-requisitos
 
 - [Python 3.10 ou superior instalado](https://www.python.org/downloads/)
