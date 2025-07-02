@@ -67,5 +67,33 @@ Este projeto é uma API desenvolvida com FastAPI para gerenciar alunos, cursos e
 
 ---
 
+7. **Crie o Doockerfile:**
+
+   É um arquivo de definição do que vai ser rodado. São comandos que informam o que será rodado quando o container do Docker subir.
+   Criar na raiz do projeto.
+
+8. **Pode criar o .dockerignore**
+
+9. **Buildar o dockerfile:**
+
+   Buildar é criar a imagem do docker. -t é de tag, tag cria um nome para a imagem e o ponto é o diretório
+   
+   ```sh
+   docker build -t imersao-devops .
+   ```
+
+9. **Verificar a imagem do docker:**
+
+   ```sh
+   docker images
+   ```
+
+10. **Executar e rodar a aplicação dentro da imagem:**
+
+   Sobre a porta 8000, aparece duas vezes, porque está mapeando a porta do container e a porta da aplicação. Elas podem ser diferentes, mas nesse contexto foram iguais.
+
+   ```sh
+   docker run -p 8000:8000 imersao-devops
+   ```
 
    
