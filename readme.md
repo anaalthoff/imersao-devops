@@ -104,13 +104,15 @@ O projeto em python não foi de minha criação, ele foi importado de https://gi
 
 6. **Criaçãodo docker compose:**
 
-   É um yaml, vai organizar a forma de rodar o docker. Ao invés de rodar em linha de comando, ou na UI do desktop, roda o docker compose. Ótimo para contexto de várias aplicações. Exemplo: subir um wordpress, e depois precisa de um banco de dados, a própria aplicação, e sobre tudo junto.
+   É um yaml, vai organizar a forma de rodar o docker. Ao invés de rodar em linha de comando, ou na UI do desktop, roda o docker compose. Ótimo para contexto de várias aplicações. Exemplo: subir um wordpress, e depois precisa de um banco de dados, a própria aplicação, e sobe tudo junto.
    Antes: criava-se o ambiente virtual, ativava a 'venv', etc. Agora, com o docker compose, haverá um comando para a plicação subir. Entra na ideia do CI (Continuous Integration - Integração Contínua). Com o comando abaixo, faz o build e o run.
-   Com o dockerfile e o docker compose, os itens 2 a 5 de 'pré-requisitos' não precisam ser feitos.
+   Assim, com o dockerfile e o docker compose, os itens 2 a 5 de 'pré-requisitos' não precisam ser feitos.
+   Lembrando: para executar esse projeto em qualquer máquina, tem que ter o Docker, fazer o download do projeto, acessar a pasta onde o projeto está, a raiz, e escrever o comando abaixo: 
 
    ```sh
    docker compose  up
    ```
 
-   Dica: quando for rodar http://0.0.0.0:8000/docs, substitua por http://localhost:8000/docs
+   Projeto está de pé!
 
+   Dica: quando for rodar http://0.0.0.0:8000/docs, substitua por http://localhost:8000/docs
