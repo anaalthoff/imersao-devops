@@ -71,15 +71,16 @@ O projeto em python não foi de minha criação, ele foi importado de https://gi
 - Para reiniciar o banco, basta apagar o arquivo `escola.db` (isso apagará todos os dados).
 
 ---
+## Criando documentos do Docker
 
-7. **Crie o Doockerfile:**
+1. **Crie o Doockerfile:**
 
    É um arquivo de definição do que vai ser rodado. São comandos que informam o que será rodado quando o container do Docker subir.
    Criar na raiz do projeto.
 
-8. **Pode criar o .dockerignore**
+2. **Pode criar o .dockerignore**
 
-9. **Buildar o dockerfile:**
+3. **Buildar o dockerfile:**
 
    Buildar é criar a imagem do docker. -t é de tag, tag cria um nome para a imagem e o ponto é o diretório
    
@@ -87,18 +88,16 @@ O projeto em python não foi de minha criação, ele foi importado de https://gi
    docker build -t imersao-devops .
    ```
 
-9. **Verificar a imagem do docker:**
+4. **Verificar a imagem do docker:**
 
    ```sh
    docker images
    ```
 
-10. **Executar e rodar a aplicação dentro da imagem:**
+5. **Executar e rodar a aplicação dentro da imagem:**
 
    Sobre a porta 8000, aparece duas vezes, porque está mapeando a porta do container e a porta da aplicação. Elas podem ser diferentes, mas nesse contexto foram iguais.
 
    ```sh
    docker run -p 8000:8000 imersao-devops
    ```
-
-   
