@@ -102,7 +102,7 @@ O projeto em python não foi de minha criação, ele foi importado de https://gi
    docker run -p 8000:8000 imersao-devops
    ```
 
-6. **Criaçãodo docker compose:**
+6. **Criação do docker compose:**
 
    É um yaml, vai organizar a forma de rodar o docker. Ao invés de rodar em linha de comando, ou na UI do desktop, roda o docker compose. Ótimo para contexto de várias aplicações. Exemplo: subir um wordpress, e depois precisa de um banco de dados, a própria aplicação, e sobe tudo junto.
    Antes: criava-se o ambiente virtual, ativava a 'venv', etc. Agora, com o docker compose, haverá um comando para a plicação subir. Entra na ideia do CI (Continuous Integration - Integração Contínua). Com o comando abaixo, faz o build e o run.
@@ -116,3 +116,30 @@ O projeto em python não foi de minha criação, ele foi importado de https://gi
    Projeto está de pé!
 
    Dica: quando for rodar http://0.0.0.0:8000/docs, substitua por http://localhost:8000/docs
+
+## Utilizando Google Cloud
+
+**Se quiser utilizar o Google Cloud:**
+
+   É um servidor na nuvem que faz com que a aplicação fique disponível não apenas em sua máquina.
+   Para instalar, acesse: https://cloud.google.com/sdk/docs/install#windows
+   Após instalação, reinicie o VS Code.
+   Para autenticar no Google Cloud, utilize os 3 comandos abaixo:
+
+   ```sh
+   gcloud auth login
+   gcloud config set project PROJECT_ID
+   gcloud run deploy --port=8000
+   ```
+
+   Ao executar a última linha, ele perguntará "deploy do que?". Significa que tem que informar uma pasta. Ele irá sugerir uma pasta, se for ela, apenas dar enter. Se não, escrever a pasta correta.
+   Exemplo: Source code location (C:\Users\exemplo\Desktop\imersao-devops):
+
+   Depois vai pedir o nome do serviço. Escolha um.
+
+   Alguns conceitos:
+   artifactregistry -> onde vai guardar a imagem do Docker
+   cloudbuild -> o google fará o build dessa imagem
+   run -> sobe a aplicação na nuvem no ambiente serveless para todos terem acesso. Faz a configuração de rede e disponibiliza na porta informada
+   Aperte sim (Y), quando essas opções aparecerem para tudo poder rodar.
+   Quando surgir: Allow unauthenticated invocations to [app], se não apertar em 'sim' (y), se não autorizar, cada vez que alguém for acessar a aplicação, tem que dar permissão. Quem não tem acesso, dá erro 403. 
